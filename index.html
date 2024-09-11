@@ -5,73 +5,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
-	<style>
-		header {
-            background-color: #000000;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-
-        body {
-            font-family: 'Helvetica', sans-serif;
-        }
-
-        h1,
-        h2 {
-            font-weight: normal; /* Ensure both headers are not bold */
-        }
-
-        /* Apply styles directly to all buttons */
-        button {
-            font-family: 'Helvetica', sans-serif;
-            padding: 5px 5px;
-            background-color: transparent; /* Clear background */
-            border: none; /* No border */
-            color: white; /* Text color */
-            cursor: pointer; /* Pointer on hover */
-            font-size: 16px; /* Font size */
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .social-icons a {
-            color: white; /* Icon color */
-            margin-left: 10px; /* Space between icons */
-            text-decoration: none; /* Remove underline from links */
-        }
-
-        .social-icons img {
-            width: 20px; /* Adjust the size of the icon */
-            height: 20px; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align the icon with text */
-        }
-
-	</style>
+	<link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 
 <body>
-<header>
-	<a href="https://insane-eli.github.io/">
-		<button>Home</button>
-	</a>
-	<div class="social-icons">
-		<a href="https://www.github.com/insane-eli" target="_blank" title="GitHub">
-			<img src="github.png" alt="GitHub Icon"> <!-- Ensure the image path is correct -->
-		</a>
-		<a href="https://www.linkedin.com/in/eli-currah" target="_blank" title="LinkedIn">
-			<img src="linkedin.png" alt="LinkedIn Icon"> <!-- Ensure the image path is correct -->
-		</a>
-	</div>
-</header>
-<h1>About Me</h1>
-<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+	<!-- Header will be loaded here -->
+	<div id="header"></div>
+
+	<script>
+		fetch(header.html') // Load the header HTML file
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data; // Insert the header HTML into the page
+            });
+	</script>
+	<h1>Projects</h1>
+	<h2>Lorem ipsum dolor sit amet.</h2>
 </body>
 
 </html>

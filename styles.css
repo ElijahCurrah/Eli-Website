@@ -1,0 +1,60 @@
+    header, h1, h2, button {
+        text-transform: uppercase; /* Makes all text uppercase */
+        font-weight: bold;
+    }
+
+
+    header {
+        background-color: #000000;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+    body {
+        font-family: 'Helvetica', sans-serif;
+    }
+
+    h1, h2 {
+        font-weight: bold; /* Ensure both headers are not bold */
+    }
+
+    /* Apply styles directly to all buttons */
+    button {
+        margin-left: auto;
+        font-family: 'Helvetica', sans-serif;
+        padding: 5px 5px;
+        background-color: transparent; /* Clear background */
+        border: none; /* No border */
+        color: white; /* Text color */
+        cursor: pointer; /* Pointer on hover */
+        font-size: 16px; /* Font size */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .nav-buttons {
+        display: flex; /* Align buttons side by side */
+    }
+
+    .nav-buttons a {
+        margin-right: 10px; /* Add space between buttons */
+    }
+
+    .social-icons a {
+        color: white; /* Icon color */
+        margin-left: 10px; /* Space between icons */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    .social-icons img {
+        width: 20px; /* Adjust the size of the icon */
+        height: 20px; /* Maintain aspect ratio */
+        vertical-align: middle; /* Align the icon with text */
+    }
