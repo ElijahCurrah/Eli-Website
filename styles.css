@@ -35,6 +35,14 @@
         color: black;
     }
 
+    .button-on-white: {
+            color: #808080;
+    }
+
+    .button-on-white:hover {
+            color: black;
+    }
+
     .nav-buttons {
         display: flex; /* Align buttons side by side */
     }
