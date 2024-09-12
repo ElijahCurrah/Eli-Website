@@ -13,10 +13,6 @@
         color: white;
     }
 
-    body {
-        font-family: 'Bebas Neue', sans-serif;
-    }
-
     h1, h2 {
         font-weight: bold; /* Ensure both headers are not bold */
     }
