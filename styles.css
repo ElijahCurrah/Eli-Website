@@ -55,27 +55,49 @@
         vertical-align: middle; /* Align the icon with text */
     }
 
-    .todo-container {
+    /* Style for the to-do list container */
+    #todoContainer {
         max-width: 400px;
-        margin: auto;
+        margin: 0 auto;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
     }
 
-    input[type="text"] {
+    /* Style for the input field */
+    #taskInput {
         width: 100%;
         padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
         margin-bottom: 10px;
-        box-sizing: border-box;
     }
 
-    ul {
-        list-style: none;
-        padding: 0;
+    /* Style for the to-do list */
+    #todoList {
+        list-style: none;  /* Remove bullet points */
+        padding: 0;  /* Remove default padding */
     }
 
-    li {
+    /* Style for each list item */
+    #todoList li {
         padding: 10px;
-        border-bottom: 1px solid #ccc;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        background: #f9f9f9;
+        transition: background 0.3s;
+        cursor: pointer;  /* Change cursor on hover */
+    }
+
+    /* Change background color on hover */
+    #todoList li:hover {
+        background: #e0e0e0;
+    }
+
+    /* Style for removed tasks (optional) */
+    .removed {
+        text-decoration: line-through;  /* Strikethrough effect */
+        color: #aaa;  /* Lighter color for removed tasks */
     }

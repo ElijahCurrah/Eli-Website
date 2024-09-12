@@ -1,30 +1,28 @@
-// Function to add a task
+
 function addTask() {
     const taskInput = document.getElementById('taskInput');
-    const task = taskInput.value.trim();  // Get the trimmed value
+    const task = taskInput.value.trim();
 
     if (task) {
         const todoList = document.getElementById('todoList');
 
-        const li = document.createElement('li');
+        const li = document.createElement('li'); //list item
         li.textContent = task;
 
-        // Add click event to remove the task
         li.onclick = function() {
             removeTask(li);
         };
 
-        todoList.appendChild(li);  // Add the new task to the list
-        saveTasks();  // Save the updated list of tasks in cookies
+        todoList.appendChild(li);
+        saveTasks();
 
-        taskInput.value = '';  // Clear the input after adding the task
+        taskInput.value = '';
     }
 }
 
-// Function to remove a task
 function removeTask(taskElement) {
-    taskElement.remove();  // Remove the task from the UI
-    saveTasks();  // Update the cookie to reflect the removal
+    taskElement.remove();
+    saveTasks();
 }
 
 // Save tasks in cookies
@@ -38,9 +36,9 @@ function saveTasks() {
 
     // Convert the array to a JSON string and save it in cookies
     const tasksString = JSON.stringify(tasks);
-    document.cookie = `tasks=${tasksString}; path=/; max-age=31536000`;  // Save the cookie for 1 year
+    document.cookie = `tasks=${tasksString}; path=/; max-age=365 * 24 * 60 * 60`;  // Save the cookie for 1 year
 
-    console.log("Tasks saved to cookie:", tasksString);  // Debugging: Check the tasks being saved
+    // console.log("Tasks saved to cookie:", tasksString);
 }
 
 // Load tasks from cookies
