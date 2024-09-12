@@ -72,4 +72,12 @@ function loadTasks() {
 // Automatically load tasks when the page is loaded
 document.addEventListener("DOMContentLoaded", function() {
     loadTasks();  // Load tasks from cookies on page load
+
+    // Add event listener for pressing Enter key
+    const taskInput = document.getElementById('taskInput');
+    taskInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {  // Check if Enter key is pressed
+            addTask();  // Call addTask function
+        }
+    });
 });

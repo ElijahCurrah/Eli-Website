@@ -76,7 +76,8 @@
 
     /* Style for the to-do list */
     #todoList {
-        list-style: none;  /* Remove bullet points */
+        list-style: square;
+        color: 808080;
         padding: 0;  /* Remove default padding */
     }
 
